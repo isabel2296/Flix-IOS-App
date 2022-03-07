@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource,  UITableViewDelegate {
    
     @IBOutlet weak var tableView: UITableView!
+    
     // properties
     private var movies = [Movie](){
         didSet{
@@ -43,6 +44,19 @@ class ViewController: UIViewController, UITableViewDataSource,  UITableViewDeleg
         cell.configure(with: movies[indexPath.row])
         return cell
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for: cell)!
+        
+        let movie = movies[indexPath.row]
+        
+        let detailViewController = segue.destination as! MovieDetailViewController
+        
+        detailViewController.movie = movie
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 
