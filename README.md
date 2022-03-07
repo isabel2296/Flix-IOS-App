@@ -20,9 +20,7 @@ Created By: Isabel Silva
 ### App Walkthrough GIF
 
 <img src="https://github.com/isabel2296/Flix-IOS-App/blob/main/flix-part-2.gif" width=250><br>
-
-### Notes
-Describe any challenges encountered while building the app.
+ 
 ## Flix Part 1
 
 ### User Stories
